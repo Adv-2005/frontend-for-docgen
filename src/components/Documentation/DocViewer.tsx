@@ -2,7 +2,11 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-export function DocViewer({ content }) {
+interface DocViewerProps {
+  content: string;
+}
+
+export function DocViewer({ content }: DocViewerProps) {
   return (
     <div className="prose max-w-none">
       <ReactMarkdown remarkPlugins={[remarkGfm]}>

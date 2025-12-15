@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { subscribeToJobs } from '@/lib/firestore';
 
 export function useJobs() {
-  const [jobs, setJobs] = useState([]);
+  const [jobs, setJobs] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
